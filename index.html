@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>HOLA MUNDO</h1>
+    <h2>PONIENDIO A PRUEBA LO APRENDIDO</h2>
+    <p>Aprender a crear un sitio web es una de las habilidades más valiosas y completas en la actualidad, ya que abre las puertas al mundo digital. Dominar el desarrollo web te permite dar vida a tus propias ideas, emprender proyectos personales y resolver problemas reales mediante la tecnología.</p>
+
+    
+    <div class="contenedor-caos">
+        <img src="img1.jpg" alt="" class="img-caos c1">
+        <img src="img2.jpg" alt="" class="img-caos c2">
+        <img src="img3.jpg" alt="" class="img-caos c3">
+        <img src="img4.jpg" alt="" class="img-caos c4">
+        <img src="img5.jpg" alt="" class="img-caos c5">
+
+        <video src="video2.mp4" autoplay loop muted playsinline class="video-hack"></video>
+    </div>
+
+
+     <audio src="sonido.mp3" autoplay muted loop></audio>
+    <audio src="teclado.mp3" autoplay></audio>
+    <audio src="narra.wav" autoplay></audio>
+
+    <script>
+    document.body.addEventListener('click', () => {
+        const audios = document.querySelectorAll('audio');
+        audios.forEach(audio => {
+            // Desenmudecer sonido.mp3 si es necesario al hacer clic
+            audio.muted = false; 
+            audio.play().catch(err => console.log("Audio activado mediante interacción"));
+        });
+    }, { once: true });
+    </script>
+
+</body>
+</html>
